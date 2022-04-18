@@ -11,4 +11,4 @@ Funcionalidade: Realizar Login e Compra
         E devo ler a seguinte mensagem "Welcome, Veronica Costello"
         E que escolhi o produto
         E adiciono ao carrinho
-        Então devo ler a mensagem "You added Helios EverCool™ Tee to your shopping cart."
+        Então devo ler a mensagem You added Helios EverCool™ Tee
