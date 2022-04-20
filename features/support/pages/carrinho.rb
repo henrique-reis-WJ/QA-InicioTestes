@@ -1,25 +1,23 @@
 class Carrinho 
 include Capybara::DSL
 
-def EscolherProduto
-    find_by_id('ui-id-4').hover
-    sleep 1
-    find('#ui-id-16').hover
-    sleep 1
-    find('#ui-id-20').click
-    sleep 3
-    click_link('Helios EverCool™ Tee')
-end
+    def EscolherProduto
+        find('#ui-id-4').hover
+        find('#ui-id-16').hover
+        find('#ui-id-20').click
+        sleep 3
+        click_link('Helios EverCool™ Tee')
+    end
 
-def CorTamanho
-    find('#option-label-size-144-item-168').click
-    find('#option-label-color-93-item-49').click
-    click_button 'Add to Cart'
-    sleep 5
-end
+    def CorTamanho
+        find('#option-label-size-144-item-168').click
+        find('#option-label-color-93-item-49').click
+        click_button 'Add to Cart'
+        sleep 5
+    end
 
-def CarrinhoOk 
-    assert_text('You added')
-end
+    def CarrinhoOk 
+        assert_text('You added')
+    end
 
 end
