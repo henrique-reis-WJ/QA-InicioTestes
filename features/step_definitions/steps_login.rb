@@ -14,8 +14,8 @@ Dado("que eu acesso a pagina inicial") do
     sleep 5
   end
 
-   Então("devo ler a seguinte mensagem {string}") do |mensagem_login|
-    login.Autenticado (mensagem_login)
+   Então("estarei logado") do
+    login.Autenticado
   end
 
   Dado("que escolhi o produto") do
@@ -26,6 +26,6 @@ Dado("que eu acesso a pagina inicial") do
     carrinho.CorTamanho
   end
   
-  Então("devo ler a mensagem You added Helios EverCool™ Tee") do
+  Então("devo ler a mensagem You added to your shopping cart") do
     carrinho.CarrinhoOk
   end
