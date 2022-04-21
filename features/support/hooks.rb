@@ -1,7 +1,3 @@
-def embed(x,y=nil,z=nil)
-    puts "Screenshot at #{x}"
-end
-
 After do |scenario|
     Dir.mkdir('Data') unless Dir.exist?('Data')
     Dir.mkdir('Data/reports') unless Dir.exist?('Data/reports')
@@ -20,7 +16,11 @@ ReportBuilder.configure do |config|
     config.report_title = 'My Results'
     config.include_images = true
     config.compress_images = false
-    config.additional_info = {browser: 'Chrome', environment: 'Stage 5'} 
+    config.color = 'indigo'
+    config.additional_info = {browser: 'Google Chrome',
+                              environment: 'Luma',
+                              QA: 'Henrique Ribeiro',
+                              Projeto: 'Report Luma'}
   end
   
   ReportBuilder.build_report
